@@ -29,7 +29,7 @@ const UserForm = (props) => {
         //    props.msg(alert);
         //    return;   
         }
-        else if(UserAge.length<=0){
+        else if(UserAge.length<=0 || +UserAge<1){
             alert.alertHead = "Invalid Age";
             alert.alertMsg = "Plese Enter Valid Age... It can't be less than equal to ZERO!";
             // props.msg(alert);

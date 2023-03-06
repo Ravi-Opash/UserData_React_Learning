@@ -6,11 +6,12 @@
     display: none;
     width: 40%;
     height: 220px;
-    z-index: 2;
+    z-index: 10;
     opacity: 100% !important;
     border: 5px solid black;
     border-radius: 20px;
-    outline: 10000px solid rgba(0, 0, 0, 0.6);;
+    outline: 10000px solid rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     overflow: hidden;   
 }
 

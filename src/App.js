@@ -8,8 +8,9 @@ function App() {
   const UserDataList = [];
 
   const [updatedList, setUserList] = useState(UserDataList);
-  const [alert, setAlert] = useState("");
+  const [alert, setAlert] = useState([]);
 
+ 
   const UserEnterdData = (data) => {
     // console.log(data.msg.alertMsg);
     if (data.msg.alertMsg === "" || data.msg.alertMsg === undefined) {
@@ -23,10 +24,15 @@ function App() {
     }
   };
 
+  const setError = () => { 
+    setAlert(null)
+    console.log("run");
+  }
+
   return (
     <div className={style.main}>
       <UserForm formData={UserEnterdData} />
-      <AlertBox msg={alert} />
+      {alert && (<AlertBox msg={alert} onConfirm={setError} />)}
       <MainLists lists={updatedList} />
     </div>
   );

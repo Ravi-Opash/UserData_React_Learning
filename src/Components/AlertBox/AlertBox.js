@@ -12,13 +12,13 @@ const AlertBox = (props) => {
     }
 
     return(
-          <div className={`${style.main_alert_box} ${!isValid && style.invalid}`}>
+          <div className={`${style.main_alert_box} ${!isValid && style.invalid}`} >
             <div className={style.alert_box_top}>{props.msg.alertHead}</div>
             <div className={style.alert_box_down}>
                 <p>{props.msg.alertMsg}</p>
             </div>
             <div className={style.alert_box_button}>
-                <button>Okay</button>
+                <button onClick={props.onConfirm}>Okay</button>
             </div>
           </div>
     )
